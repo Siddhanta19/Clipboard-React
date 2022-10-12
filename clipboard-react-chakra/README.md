@@ -1,4 +1,4 @@
-# Loopstudios Website
+# Clipboard Website
 
 ## Usage :
 
@@ -20,4 +20,4 @@
 <br>
 <br>
 
-![Alt text](src/images/loopstudios.png)
+![Alt text](src/images/clipboard.png)
