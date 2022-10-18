@@ -1,4 +1,5 @@
 import React from "react";
+import { chakra } from "@chakra-ui/react";
 
 // imp chakra ui
 import {
@@ -13,7 +14,11 @@ import {
 	Grid,
 	StackDivider,
 	Icon,
+	Divider,
 } from "@chakra-ui/react";
+
+import { FaFacebook, FaGithub, FaInstagram, FaYoutube } from "react-icons/fa";
+import { IoLogoTwitter } from "react-icons/io";
 
 // imp dark/light mode
 import { ColorModeSwitcher } from "./ColorModeSwitcher";
@@ -307,41 +312,51 @@ function App() {
 				</Box>
 			</Box>
 
-			<Box id="Footer" py={{ base: "6", lg: "10" }} bgColor={"rebeccapurple"}>
-				<Flex
-					direction={["column", null, "row"]}
-					px={["6", null, "12"]}
-					alignItems={"center"}
-					justifyContent="space-around"
-				>
-					<Image py={"5"} src={logo} maxW={"20"} />
-					<Stack
-						justifyContent={"space-around"}
-						alignItems={"center"}
-						spacing={{ base: "10" }}
-						direction={{ base: "column", md: "row" }}
+			<Box id="Footer">
+				<Box id="divider" px={"5"}>
+					<Divider />
+				</Box>
+				<Box>
+					<Flex
+						direction={["column", null, "row"]}
+						px={["6", null, "12"]}
+						justifyContent="space-around"
 					>
-						<Flex
-							gap={"5"}
-							flexWrap={"wrap"}
-							direction={"row"}
-							fontSize={{ base: "xl", lg: "2xl" }}
+						<Image py={"10"} src={logo} maxW={"10"} />
+
+						<Box w={"full"}>
+							<Flex
+								gap={"5"}
+								flexWrap={"wrap"}
+								direction={"row"}
+								fontSize={{ base: "md", lg: "xl" }}
+								mb={"5"}
+							>
+								<chakra.ul display={"flex"} listStyleType={"none"} gap={"6"}>
+									<chakra.li>Contact </chakra.li>
+									<chakra.li>About</chakra.li>
+									<chakra.li>Install Guide</chakra.li>
+									<chakra.li>Privacy Policy</chakra.li>
+									<chakra.li>FAQs</chakra.li>
+								</chakra.ul>
+							</Flex>
+						</Box>
+
+						<Stack
+							direction={{ base: "row" }}
+							spacing={"12"}
+							alignItems="center"
+							justifyContent={"space-around"}
+							py={"5"}
 						>
-							<Text>FAQs</Text>
-							<Text>Privacy Policy</Text>
-							<Text>Install Guide</Text>
-							<Text>Contact Us</Text>
-							<Text>About Us</Text>
-							<Text>Press Kit</Text>
-						</Flex>
-					</Stack>
-					<Stack spacing={"12"}>
-						<Icon></Icon>
-						<Icon></Icon>
-						<Icon></Icon>
-						<Icon></Icon>
-					</Stack>
-				</Flex>
+							<Icon boxSize={"10"} as={FaFacebook} />
+							<Icon boxSize={"10"} as={IoLogoTwitter} />
+							<Icon boxSize={"10"} as={FaYoutube} />
+							<Icon boxSize={"10"} as={FaGithub} />
+							<Icon boxSize={"10"} as={FaInstagram} />
+						</Stack>
+					</Flex>
+				</Box>
 			</Box>
 		</ChakraProvider>
 	);

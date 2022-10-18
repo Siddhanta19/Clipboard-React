@@ -1,7 +1,15 @@
-import { Container, Center, Text, Box } from "@chakra-ui/react";
+import {
+	Container,
+	Center,
+	Text,
+	Box,
+	useColorMode,
+	useColorModeValue,
+} from "@chakra-ui/react";
 import React from "react";
 
 function BigHeadingPara({ paraData }) {
+	const colorValue = useColorModeValue("green.50", "blackAlpha.700");
 	const [paraDataFirstPart, paraDataSecondPart] = paraData;
 	return (
 		<Box>
@@ -9,8 +17,8 @@ function BigHeadingPara({ paraData }) {
 				align={"center"}
 				fontWeight={"medium"}
 				fontSize={{ base: "md", sm: "xl", md: "2xl", lg: "3xl" }}
-				color={"gray.300"}
-				px={'10'}
+				color={{ colorValue }}
+				px={"10"}
 			>
 				{paraDataFirstPart}
 				<br />
