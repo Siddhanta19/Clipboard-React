@@ -26,15 +26,14 @@ export default function Footer(props) {
 					bgColor={"blue.600"}
 					alignItems={"center"}
 					gap={"5"}
+					color={"gray.100"}
 					textAlign={"center"}
-					flexDir={"column"}
-				>
+					flexDir={"column"}>
 					<Text
 						textTransform={"uppercase"}
 						letterSpacing={"widest"}
 						fontWeight={"semibold"}
-						fontSize={"sm"}
-					>
+						fontSize={"sm"}>
 						35,000+ already joined
 					</Text>
 
@@ -46,8 +45,7 @@ export default function Footer(props) {
 						bgColor={"blackAlpha.800"}
 						placeholder="Enter Your Email Address"
 						px={"5"}
-						width={"auto"}
-					></Input>
+						width={"auto"}></Input>
 
 					<Button bgColor={"red.500"}> Contact Us</Button>
 				</Flex>
@@ -61,15 +59,13 @@ export default function Footer(props) {
 						alignItems={"center"}
 						gap={"8"}
 						textAlign={"center"}
-						flexDir={"column"}
-					>
+						flexDir={"column"}>
 						<Image src={logo} />
 						<Flex
 							letterSpacing={"widest"}
 							color={"gray.500"}
 							gap={"5"}
-							flexDir={"column"}
-						>
+							flexDir={"column"}>
 							<Text>FEATURES</Text>
 							<Text>DOWNLOAD</Text>
 							<Text>FAQ</Text>

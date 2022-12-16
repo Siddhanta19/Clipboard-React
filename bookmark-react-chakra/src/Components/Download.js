@@ -6,6 +6,7 @@ import {
 	Image,
 	Stack,
 	Text,
+	useColorModeValue,
 } from "@chakra-ui/react";
 import React from "react";
 
@@ -13,15 +14,14 @@ import chrome from "../images/logo-chrome.svg";
 import firefox from "../images/logo-firefox.svg";
 import opera from "../images/logo-opera.svg";
 
-
-
 export default function Download(props) {
+	const textColor = useColorModeValue("messenger.900", "messenger.50");
 	return (
 		<Box mb={"28"} p={"5"} mx={"auto"} id="Download">
 			<Text mb={"5"} textAlign={"center"} fontSize={"2xl"} fontWeight={"bold"}>
 				Download The Extension
 			</Text>
-			<Text color={"messenger.50"} letterSpacing="wide" textAlign={"center"}>
+			<Text color={textColor} letterSpacing="wide" textAlign={"center"}>
 				We have got more browsers in the pipeline. Please, Do let us know if
 				you've got a favorite you'd like us to prioritize.
 			</Text>
@@ -31,19 +31,14 @@ export default function Download(props) {
 				gap={"20"}
 				justifyContent={"center"}
 				alignItems={"center"}
-				flexDir={{ base: "column", md: "row" }}
-			>
+				flexDir={{ base: "column", md: "row" }}>
 				<Flex gap={"5"} alignItems={"center"} flexDir={"column"} id="Chrome">
 					<Image src={chrome}></Image>
 					<Flex gap={"5"} flexDir={"column"}>
 						<Text textAlign={"center"} fontSize={"2xl"} fontWeight={"bold"}>
 							Add to Chrome
 						</Text>
-						<Text
-							color={"messenger.50"}
-							letterSpacing="wide"
-							textAlign={"center"}
-						>
+						<Text color={textColor} letterSpacing="wide" textAlign={"center"}>
 							Minimum Version 62
 						</Text>
 						<Divider />
@@ -61,11 +56,7 @@ export default function Download(props) {
 						<Text textAlign={"center"} fontSize={"2xl"} fontWeight={"bold"}>
 							Add to Firefox
 						</Text>
-						<Text
-							color={"messenger.50"}
-							letterSpacing="wide"
-							textAlign={"center"}
-						>
+						<Text color={textColor} letterSpacing="wide" textAlign={"center"}>
 							Minimum Version 55
 						</Text>
 						<Divider />
@@ -83,11 +74,7 @@ export default function Download(props) {
 						<Text textAlign={"center"} fontSize={"2xl"} fontWeight={"bold"}>
 							Add to Opera
 						</Text>
-						<Text
-							color={"messenger.50"}
-							letterSpacing="wide"
-							textAlign={"center"}
-						>
+						<Text color={textColor} letterSpacing="wide" textAlign={"center"}>
 							Minimum Version 46
 						</Text>
 						<Divider />

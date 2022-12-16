@@ -1,4 +1,4 @@
-import { Box, Text } from "@chakra-ui/react";
+import { Box, Text, useColorModeValue } from "@chakra-ui/react";
 import React from "react";
 
 import {
@@ -10,21 +10,26 @@ import {
 } from "@chakra-ui/react";
 
 export default function Faq(props) {
+	const textColor = useColorModeValue("messenger.900", "messenger.50");
 	return (
 		<Box mb={"5"} p={"5"} mx={"auto"} id="Faq">
 			<Text mb={"5"} textAlign={"center"} fontSize={"2xl"} fontWeight={"bold"}>
 				Frequently Asked Questions
 			</Text>
-			<Text color={"messenger.50"} letterSpacing="wide" textAlign={"center"}>
+			<Text color={textColor} letterSpacing="wide" textAlign={"center"}>
 				Here are some of our FAQs. If you have any other questions you'd like
 				answered, please feel free to email us.
 			</Text>
 
-			<Accordion color={"gray.300"} mt={"10"} allowMultiple>
+			{/* Accordion */}
+			<Accordion color={textColor} mt={"10"} allowMultiple>
 				<AccordionItem>
 					<h2>
 						<AccordionButton>
-							<Box flex="1" textAlign="left">
+							<Box
+								flex="1"
+								textAlign="left"
+								fontSize={{ base: "xl", md: "2xl" }}>
 								What is Bookmark?
 							</Box>
 							<AccordionIcon />
@@ -41,7 +46,10 @@ export default function Faq(props) {
 				<AccordionItem>
 					<h2>
 						<AccordionButton>
-							<Box flex="1" textAlign="left">
+							<Box
+								flex="1"
+								textAlign="left"
+								fontSize={{ base: "xl", md: "2xl" }}>
 								How can I request a new browser?
 							</Box>
 							<AccordionIcon />
@@ -58,7 +66,10 @@ export default function Faq(props) {
 				<AccordionItem>
 					<h2>
 						<AccordionButton>
-							<Box flex="1" textAlign="left">
+							<Box
+								flex="1"
+								textAlign="left"
+								fontSize={{ base: "xl", md: "2xl" }}>
 								Is there a mobile app?
 							</Box>
 							<AccordionIcon />
@@ -75,7 +86,10 @@ export default function Faq(props) {
 				<AccordionItem>
 					<h2>
 						<AccordionButton>
-							<Box flex="1" textAlign="left">
+							<Box
+								flex="1"
+								textAlign="left"
+								fontSize={{ base: "xl", md: "2xl" }}>
 								What about other chromium browsers?
 							</Box>
 							<AccordionIcon />

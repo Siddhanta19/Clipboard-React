@@ -9,12 +9,31 @@ import {
 	TabList,
 	TabPanel,
 	TabPanels,
+	useColorModeValue,
 } from "@chakra-ui/react";
-import React from "react";
+import { Fade, Slide } from "react-awesome-reveal";
 
 import illustration1 from "../images/illustration-features-tab-1.svg";
 
 export default function Features(props) {
+	const textColor = useColorModeValue("messenger.900", "messenger.50");
+	/* const featuresSection = document.getElementById("FeaturesSection");
+
+	const featuresCallback = function (entries, observer) {
+		const [entry] = entries;
+
+		if (!entry.isIntersecting) return;
+
+		entry.target.style.visibility = "visible"
+	};
+
+	const featuresSectionObserver = new IntersectionObserver(featuresCallback, {
+		root: null,
+		threshold: 0.2,
+	});
+
+	// featuresSectionObserver.observe() */
+
 	return (
 		<Box mb={"20"} p={"5"} mx={"auto"} id="FeaturesSection">
 			<Text
@@ -22,11 +41,10 @@ export default function Features(props) {
 				letterSpacing={"wider"}
 				textAlign={"center"}
 				fontSize={"3xl"}
-				fontWeight={"bold"}
-			>
+				fontWeight={"bold"}>
 				Features
 			</Text>
-			<Text color={"messenger.50"} letterSpacing="wide" textAlign={"center"}>
+			<Text color={textColor} letterSpacing="wide" textAlign={"center"}>
 				Our aim is to make it quick and easy for you to access your favorite
 				websites. Your bookmarks sync between your devices so you can access
 				them on the go.
@@ -36,10 +54,9 @@ export default function Features(props) {
 
             </Flex> */}
 
-			<Tabs isLazy variant={"unstyled"} my={"16"}>
+			<Tabs color={textColor} isLazy variant={"unstyled"} my={"16"}>
 				<TabList flexDirection={"column"}>
 					<Tab
-						color={"twitter.100"}
 						borderBottom={{ base: "3px solid rgb(81 79 79)" }}
 						_selected={{
 							borderBottom: "4px solid orangered",
@@ -47,12 +64,10 @@ export default function Features(props) {
 							fontWeight: "semibold",
 						}}
 						fontSize={"lg"}
-						py={"2"}
-					>
+						py={"2"}>
 						Simple Bookmarking
 					</Tab>
 					<Tab
-						color={"twitter.100"}
 						borderBottom={{ base: "3px solid rgb(81 79 79)" }}
 						_selected={{
 							borderBottom: "4px solid orangered",
@@ -60,12 +75,10 @@ export default function Features(props) {
 							fontWeight: "semibold",
 						}}
 						fontSize={"lg"}
-						py={"2"}
-					>
+						py={"2"}>
 						Speedy Searching
 					</Tab>
 					<Tab
-						color={"twitter.100"}
 						borderBottom={{ base: "3px solid rgb(81 79 79)" }}
 						_selected={{
 							borderBottom: "4px solid orangered",
@@ -73,8 +86,7 @@ export default function Features(props) {
 							fontWeight: "semibold",
 						}}
 						fontSize={"lg"}
-						py={"2"}
-					>
+						py={"2"}>
 						Easy Searching
 					</Tab>
 				</TabList>
@@ -87,17 +99,15 @@ export default function Features(props) {
 								mt={"36"}
 								textAlign={"center"}
 								fontSize={"2xl"}
-								fontWeight={"bold"}
-							>
+								fontWeight={"bold"}>
 								Bookmark in One Click
 							</Text>
 							{/* Description */}
 							<Text
 								mt={"8"}
-								color={"messenger.50"}
+								color={textColor}
 								letterSpacing="wide"
-								textAlign={"center"}
-							>
+								textAlign={"center"}>
 								Organize your bookmarks however you like. Our simple
 								drag-and-drop control gives you complete control over how you
 								manage your favorite sites

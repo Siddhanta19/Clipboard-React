@@ -1,16 +1,24 @@
-import { Box, Button, Flex, Image, Text } from "@chakra-ui/react";
+import {
+	Box,
+	Button,
+	Flex,
+	Image,
+	Text,
+	useColorModeValue,
+} from "@chakra-ui/react";
 import React from "react";
 
 import hero from "../images/illustration-hero.svg";
 
-export default function Intro(props) {
+export default function Intro() {
+	const textColor = useColorModeValue("messenger.900", "messenger.50");
 	return (
 		<Box p={"5"} mx={"auto"} id="IntroSection">
 			<Image src={hero}></Image>
 			<Text mb={"10"} textAlign={"center"} fontSize={"2xl"} fontWeight={"bold"}>
 				A Simple Bookmark Manager
 			</Text>
-			<Text color={"messenger.50"} letterSpacing="wide" textAlign={"center"}>
+			<Text color={textColor} letterSpacing="wide" textAlign={"center"}>
 				A clean and simple interface to organize your favorite websites. Open a
 				new browser tab and see your sites load instantly. Try it for free.
 			</Text>
@@ -21,8 +29,7 @@ export default function Intro(props) {
 					py={"6"}
 					size={"sm"}
 					colorScheme={"messenger"}
-					textTransform={"capitalize"}
-				>
+					textTransform={"capitalize"}>
 					Get it on chrome
 				</Button>
 				<Button
@@ -30,8 +37,7 @@ export default function Intro(props) {
 					fontWeight={"bold"}
 					py={"6"}
 					size={"sm"}
-					textTransform={"capitalize"}
-				>
+					textTransform={"capitalize"}>
 					Get it on firefox
 				</Button>
 			</Flex>
