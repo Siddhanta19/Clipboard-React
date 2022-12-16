@@ -1,19 +1,23 @@
-# Testimonial Grid
+# Shortly Website
 
-Testimonial Grid project from my Tailwind course and from [Frontend Mentor Challenge](https://www.frontendmentor.io/challenges/testimonials-grid-section-Nnw6J7Un7)
+## Usage :
 
-## Usage
+<hr>
 
-Install dependencies
+> ## `npm install`
+>
+> Installs the required dependencies
 
-```
-npm Install
-```
+> ## `npm start`
+>
+> Runs the app in the development mode.<br>
+> Open [http://localhost:3000](http://localhost:3000)
 
-Run Tailwind CLI
+> ## `npm run build`
+>
+> Builds the app for production to the `build` folder.<br>
 
-```
-npm run watch
-```
+<br>
+<br>
 
-![Alt text](images/testimonial-grid.png)
+![Alt text](src/images/testimonial-grid.png)
